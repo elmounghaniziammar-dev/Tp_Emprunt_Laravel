@@ -49,7 +49,6 @@ class LoansController extends Controller
             'returned' => true,
             'status' => 'returned'
         ]);
-        //yfyff
         return response()->json($loan, 200);
     }
 }   
