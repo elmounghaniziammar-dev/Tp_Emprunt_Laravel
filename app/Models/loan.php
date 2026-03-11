@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class loans extends Model
+class loan extends Model
 {
     //
     protected $fillable = [
