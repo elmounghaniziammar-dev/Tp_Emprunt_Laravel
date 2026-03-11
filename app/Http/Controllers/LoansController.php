@@ -16,11 +16,11 @@ class LoansController extends Controller
     //Enregistrer un nouvel emprunt
     public function store(Request $request){
         $validatedData = $request->validate([
-        'borrower_name'  => 'required|string|max:255',
-        'borrower_email' => 'required|email|max:255',
-        'book_title'     => 'required|string|max:255',
+        'borrower_name'  => 'required|string',
+        'borrower_email' => 'required|email',
+        'book_title'     => 'required|string',
         'borrowed_at'    => 'required|date',
-        'due_date'       => 'required|date|after_or_equal:borrowed_at',
+        'due_date'       => 'required|date',
     ]);
         $loan = loans::create($validatedData);
         return response()->json($loan,201);
